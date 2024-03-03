@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Main container start*/
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+}
+/* Main container end */
+
+/* Header start*/
+ .top-box-1{
+    position: relative;
+    background-color: rgb(23, 25, 47);
+    padding: 20px;
+    color: #fff;
+}
+
+.top-box-1 :first-child{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.7rem;
+}
+
+.top-box-1 :nth-child(2){
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.top-box-1 :first-child, .top-box-1 :nth-child(2){
+    text-align: center;
+}
+
+.top-box-1 :last-child{
+    font-size: 0.9em;
+    margin-top: 8px;
+}
+
+/* Contact start */
+.top-box-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    background-image: linear-gradient(to top, rgb(30, 33, 61),  rgb(23, 25, 47));
+    padding: 20px;
+}
+
+.left-contact ul, .right-contact ul{
+    position: relative;
+}
+
+.left-contact ul li, .right-contact ul li{
+    position: relative;
+    list-style: none;
+    /* margin: 10px 0; */
+    cursor: pointer;
+}
+
+.left-contact ul li .icon, .right-contact ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.left-contact ul li span, .right-contact ul li span{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+/* Contact end */
+/* Header end */
+
+/* Middle content start */
+.box-3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Left side content start */
+.box-3 .left{
+    position: relative;
+    width: 50%;
+    /* background-color: blue; */
+    padding: 30px;
+    height: 50rem;
+}
+
+.left h3, .right h3{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.left h4{
+    font-size: 1.3rem;
+}
+
+.left h5{
+    font-size: 1rem;
+}
+
+.left p, .right p{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgb(51, 50, 50);
+}
+
+b{
+    color: black
+}
+
+.education ul li, .experience ul li, .projects ul li{
+    list-style: none;
+}
+
+.education ul li p, .experience ul li h4{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Left side content end */
+
+/* Right side content start */
+.right h4{
+    font-size: 1rem;
+}
+.right-contact li a{
+    text-decoration: none;
+}
+
+.box-3 .right{
+    position: relative;
+    width: 50%;
+    /* background-color: violet; */
+    padding: 20px;
+    margin-top: 0;
+    height: 50rem;
+}
+
+.projects{
+    margin-top: 30px;
+}
+/* Right side content end */
+/* Middle content end */
+
+/* Media queries for different screen sizes start*/
+@media(max-width:1250px){
+    .container{
+        margin: 10px;
+    }
+}
+@media(max-width:950px){
+    .container{
+        margin: 0;
+    }
+    .box-3{
+        flex-direction: column;
+    }
+    .box-3 .left{
+        width: 100%;
+        height: auto;
+    }
+    .box-3 .right{
+        width: 100%;
+        height: auto
+    }
+}
+@media(max-width:800px){
+    .box-3 .right{
+        height: 50rem;
+    }
+}
+/* Media queries for different screen sizes end*/

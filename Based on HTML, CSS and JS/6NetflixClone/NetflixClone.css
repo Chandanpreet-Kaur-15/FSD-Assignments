@@ -1,0 +1,610 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Noto+Serif+Makasar&display=swap'); */
+/* @import url('https://fonts.cdnfonts.com/css/netflix-font'); */
+/* @import url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2); */
+
+@font-face{
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/graphik/v2/GraphikTH-Bold.woff2) format("woff2"),url(https://assets.nflxext.com/ffe/siteui/fonts/graphik/v2/GraphikTH-Bold.woff) format("woff");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    /* font-family: "Noto Serif Makasar", serif; */
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+
+}
+
+
+/* Smaller devices (tablets, 768px and below) */
+@media (max-width: 768px) {
+    .container, .first, .faq .faq-box {
+        max-width: 95vw;
+        margin: 20px auto;
+    }
+
+    /* Increase the width of the nav bar */
+    body{ 
+        position: relative;
+    }
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 0;
+        padding: 0 20px;
+    }
+
+    /* Increase the width of the email input box, flex-wrap the content */
+    .flex, .faq-bottom .flex {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .wdth {
+        width: 90%; /* Adjust based on your design preference */
+    }
+
+    /* Decrease the font size of all headings */
+    .content > :first-child, .first > div :first-child, .faq h2 {
+        font-size: 26px;
+    }
+
+    .content > :nth-child(2), .content > :nth-child(3), .first > div :nth-child(2) {
+        font-size: 20px;
+    }
+
+    /* Make the FAQ questions take all width */
+    .faq .faq-box {
+        padding: 0 20px; /* Not working */
+    }
+    .content, .first > div, .faq h2, .faq .faq-box .flex2, .footer-items {
+        text-align: center;
+    }
+
+    .flex, .faq-bottom .flex {
+        flex-direction: column;
+    }
+
+    .wdth, .wd {
+        width: auto;
+    }
+
+    .nav-right, .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-eng, .btn-sign-in {
+        margin: 10px 0;
+    }
+
+    /* Adjustments for content and video pages */
+    .first{
+        flex-wrap: wrap;
+    }
+
+    .set-img1 img, .set-img1 video {
+        width: 100%; 
+        max-width: 350px; 
+        margin: auto; 
+    }
+
+    /* Make images and videos responsive by limiting the maximum size */
+    .first > div, .set-img1 img, .set-img1 video {
+        width: 100%; 
+        max-width: 350px; 
+    }
+
+    .faq .faq-box {
+        padding: 0 5%;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+    .footer .item-3{
+        display: none;
+    }
+}
+
+/* Smaller smartphones (portrait phones, 480px and below) */
+@media (max-width: 480px) {
+    .content > :first-child, .first > div :first-child, .faq h2 {
+        font-size: 28px;
+    }
+
+    .content > :nth-child(2), .content > :nth-child(3), .first > div :nth-child(2), .faq .faq-box .flex2 {
+        font-size: 18px;
+    }
+
+    /* Buttons */
+    .btn, .btn-eng, .btn-sign-in, .style, .wdth, .wd {
+        width: auto;
+        margin-top: 10px; 
+    }
+
+    .sign-in-box, .pass-button, .red-button {
+        width: 90%; 
+        margin: auto;
+    }
+
+    .on-click-box, .faq .faq-box .flex2 {
+        padding: 15px;
+    }
+
+    /* Video pages */
+    .first{
+        flex-wrap: wrap;
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+    }
+}
+
+
+@media (max-width: 1270px) {
+    body{
+        position: relative;
+    }
+   nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width:  100vw;
+   }
+
+    /* Video pages */
+   .first{
+    flex-wrap: wrap;
+    }
+    .first .text{
+        text-align: center;
+    }
+
+    .second, .four{
+        flex-direction: column-reverse;
+    }
+
+}
+
+body{
+    background-color: black;
+}
+
+.container{
+    background-image: url("Images/Bg1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+nav{
+    /* background-color: red; */
+    max-width: 75vw;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 0 160px; */
+    margin: auto;
+    padding-top: 9px;
+}
+
+nav img{
+    color: rgb(229, 9, 20);
+    width: 150px;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-right{
+    position: relative;
+    z-index: 10;
+}
+
+.bg-container{
+    height: 100vh;
+    width: 100%;
+    opacity: 0.6;
+    background-color: black;
+    position: absolute; 
+    /*Make it's top: 0 w.r.t it's parent, which is .container here.*/
+    top: 0;    
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content{
+    /* font-family: "Martel Sans", sans-serif; */
+    /* font-family: 'Netflix Font', sans-serif; */
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    /* Should be 100vh - 70px */
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 30px;
+    position: relative;
+    color: #fff;
+}
+
+
+.content >:first-child{
+    font-size: 48px;
+    font-weight: 900;
+    font-style: normal;
+    text-align: center;
+}
+
+.content >:nth-child(2){
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.content >:nth-child(3){
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.hr-divider{
+    height: 9px;
+    background-color: rgb(48, 46, 46);
+}
+
+.btn{
+    padding: 3px 8px;
+    font-weight: bolder;
+    border-radius: 4px;
+    color: white;
+}
+
+.btn-eng{
+    width: 125px;
+    margin-right: 22px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.pd{
+    padding: 7px 10px;
+}
+
+.btn-sign-in{
+    font-size: 14px;
+    line-height: 14px;;
+}
+
+.btn-red{
+    background-color: rgb(229, 9, 20);
+    border: 2px solid rgb(229, 9, 20);
+    cursor: pointer;
+}
+
+input{
+    color: white;
+}
+
+.btn-red:hover{
+    opacity: 0.9;
+}
+
+.style{
+    padding: 15px 35px;
+    font-size: 20px;
+}
+
+.wdth{
+    width: 290px;
+    padding: 18px 35px;
+    text-align: start;
+    font-size: 18px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.wd{
+    width: 208px;
+}
+
+.transparent{
+    background: rgba(23, 23, 23, 0.6);
+    border: 0.5px solid rgba(177, 204, 215, 0.6);
+}
+
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw;
+    margin: 100px auto;
+    color: #fff;
+}
+
+.first > div :first-child{
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    font-style: normal;
+}
+.first > div :nth-child(2){
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+}
+.set-img1{
+    position: relative;
+}
+.set-img1 img{
+    width: 480px;
+    position: relative;
+    z-index: 10;
+}
+.set-img1 video{
+    position: absolute;
+    width: 68vh;
+    top: 60px;
+    right: 0;
+}
+#third{
+    width: 20vw;
+    top: 40px;
+    left: 100px;
+}
+.faq{
+    color: #fff;
+    margin: 50px 0;
+
+}
+.faq h2{
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.faq .faq-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0 160px;
+}
+.faq .faq-box .flex2{
+    background-color: rgb(48, 46, 46);
+    padding: 25px;
+}
+.faq .faq-box .flex2{
+    cursor: pointer;
+}
+.faq .faq-box .flex2:hover{
+    background-color: rgb(65, 64, 64);
+}
+.flex2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* FAQ toggle starts */
+.toggle-icon{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    margin: auto;
+    margin-right: 0;
+}
+
+.line .line1{
+    width: 28px;
+    height: 2px;
+    margin: 20px;
+}
+.line .line2{
+    width: 2px;
+    height: 28px;
+    margin: 20px;
+}
+.toggle-icon span{
+    display: block;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.open-toggle .line1{
+    transform: translate(-50%, -50%) rotate(45deg); 
+}
+.open-toggle .line2{
+    transform: translate(-50%, -50%) rotate(45deg); 
+}
+
+/* On click div */
+.on-click-box {
+    display: none;
+    transition: all 0.3s ease; 
+    background-color: rgb(49, 48, 48); 
+    color: white;
+    padding: 20px; 
+    overflow: hidden;
+    width: auto;
+}
+
+/* Show when toggled */
+.change {
+    display: block; 
+}
+/* FAQ toggle ends  */
+
+/* Footer starts */
+.faq-bottom{
+    display: flex;
+    margin: 40px 0;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    font-size: 20px;
+    line-height: 30px;
+}
+footer{
+    color: rgba(255, 255, 255, 0.7);
+}
+.box1{
+    margin: 60px 0;
+    padding: 0 160px;
+}
+.color{
+    color: black;
+    background-color: #fff;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 80vw;
+    margin-top: 20px;
+}
+.footer-items{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 14px;
+}
+.footer-items a{
+    color: rgba(255, 255, 255, 0.7);
+}
+/* Footer ends */
+
+/* Sign In Page CSS starts*/
+.sign-in-box{
+    opacity: 0.7;
+    margin: auto;
+    color: #fff;
+    text-align: start;
+    height: 600px;
+    width: 400px;
+    background-color: black;
+    border-radius: 4px;
+    padding: 50px 30px 30px 50px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sign-in-box{
+    font-size: 21px;
+}
+.new{
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+.red-button{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(229, 9, 20);
+    border: 1px solid rgb(229, 9, 20);
+    width: 365px;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.red-button:hover{
+    background-color: rgb(188, 6, 15);
+}
+
+.pass-button:hover{
+    background-color: rgb(44, 42, 42);
+
+}
+
+.pass-button{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(57, 56, 56);
+    border: 1px solid  rgb(57, 56, 56);
+    width: 365px;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+}
+.forgot-mail{
+    text-align: center; 
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.forgot-mail:hover{
+    color: rgb(153, 148, 148);
+    text-decoration: underline;
+}
+
+.check{
+    font-size: 16px;
+}
+
+.foot{
+    display: flex;
+    flex-direction: row;
+}
+
+.foot p{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.foot span{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.foot-small{
+    font-size: 13px;
+    color: #8c8c8c;
+}
+
+.extra-ht{
+    height: 180vh;
+}
+
+.footer2{
+    opacity: 0.7;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    z-index: 10;
+}
+/* Sign In CSS Page ends */
