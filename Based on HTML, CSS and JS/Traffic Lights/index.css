@@ -1,0 +1,63 @@
+.main {
+  text-align: center;
+}
+
+.main h2 {
+  margin-bottom: 25px;
+}
+
+.container {
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  background-color: rgb(143, 138, 138);
+  height: 50px;
+  width: 130px;
+  border-radius: 20px;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  flex-basis: 25%;
+  height: 100vh;
+}
+
+.right {
+  background-color: rgb(59, 55, 55);
+  border-radius: 30px;
+  position: relative;
+  flex-basis: 50%;
+  height: 25vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.light-1 div {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.light-2 div {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.light-3 div {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
