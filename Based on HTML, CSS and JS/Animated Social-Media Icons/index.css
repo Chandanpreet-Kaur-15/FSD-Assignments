@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.social-icons-flex {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.set-1 .icon-size{
+    font-size: 45px;
+    margin-right: 15px;
+    color: #ababab; 
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.set-1 a{
+    text-decoration: none;    
+}
+
+/*Animation-1 */
+.set-1 a:hover{
+    transform: translateY(-5px);
+}
+
+.set-1 a:hover:first-child {
+    color: #0a66c2;
+}
+
+.set-1 a:hover:nth-child(2) {
+    color: #0088cc;
+}
+
+.set-1 a:hover:last-child {
+    color: #24292e;
+}
+
