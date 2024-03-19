@@ -45,6 +45,18 @@ input[type="radio"] {
 }
 
 /* Light buttons start */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
 .button-container label {
     border: 2px solid gray;
     background-color: rgb(143, 138, 138);
@@ -212,17 +224,3 @@ input[type="radio"] {
         background-color: #fff;
     }
 }
-
-/* Buttons start */
-.button-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.button {
-    padding: 10px 20px;
-    cursor: pointer;
-}
-/* Buttons end */
