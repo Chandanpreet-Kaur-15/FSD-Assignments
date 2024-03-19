@@ -36,7 +36,7 @@
     margin: 10px;
     background-color: #fff;
 }
-/* Lights start */
+/* Lights end */
 
 
 /* Radio button hidden */
@@ -213,7 +213,7 @@ input[type="radio"] {
     }
 }
 
-
+/* Buttons start */
 .button-container {
     display: flex;
     flex-direction: column;
@@ -225,3 +225,4 @@ input[type="radio"] {
     padding: 10px 20px;
     cursor: pointer;
 }
+/* Buttons end */
