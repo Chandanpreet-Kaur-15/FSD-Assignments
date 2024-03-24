@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Responsive Navbar</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <input type="checkbox" name="" id="check">
+            
+            <div class="logo-container">
+                <h3 class="logo">&<span>Travels</span></h3>
+            </div>
+
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: .6s">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="nav-link" style="--i: .85s">
+                            <a href="#">Explore Places<i class="fas fa-caret-down"></i></a>
+                            <!-- Dropdown start -->
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Beaches</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Tracking</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">History<i class="fas fa-caret-down"></i></a>
+                                        <!-- Nested dropdown start -->
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Rajasthan</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Agra</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Punjab</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">More<i class="fas fa-caret-down"></i></a>
+                                                    <div class="dropdown second">
+                                                        <ul>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Himachal</a>
+                                                            </li>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Bihar</a>
+                                                            </li>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Assam</a>
+                                                            </li>
+                                                            <div class="arrow"></div>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <div class="arrow"></div>
+                                            </ul>
+                                        </div>
+                                        <!-- Nested dropdown start -->
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Picnic spots</a>
+                                    </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                            <!-- Dropdown end -->
+
+                        </li>
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="#">Services<i class="fas fa-caret-down"></i></a>
+                            <!-- Dropdown-2 start -->
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Travel guide</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Transport</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Hotels<i class="fas fa-caret-down"></i></a>
+                                        <!-- Nested dropdown-2 start -->
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Low price</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Pre-bookings</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Vacation packages</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">More<i class="fas fa-caret-down"></i></a>
+                                                    <!-- Nested dropdown-2.1 start -->
+                                                    <div class="dropdown second">
+                                                        <ul>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Activities</a>
+                                                            </li>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Customer support</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Nested dropdown-2.1 end -->
+                                                </li>
+                                                <div class="arrow"></div>
+                                            </ul>
+                                        </div>
+                                        <!-- Nested dropdown-2 end -->
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Dropdown-2 end -->
+                        </li>
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="#">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="log-sign" style="--i: 1.8s">
+                    <a href="#" class="btn transparent">Log In</a>
+                    <a href="#" class="btn solid">Sign Up</a>
+                </div>
+            </div>
+
+            <div class="hamburger-menu-container">
+                <div class="hamburger-menu">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="overlay">
+                <h2>Responsive Navigation Menu</h2>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
