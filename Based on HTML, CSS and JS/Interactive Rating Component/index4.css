@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #555;
+    background: #ecf0f3
+}
+
+/* Main container */
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ecf0f3;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: -6px -6px 6px rgba(228, 226, 226, 0.8),
+    6px 6px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+.container h2 {
+    margin-bottom: 10px;
+    font-weight: 900;
+    color: #0f72c4;
+}
+
+/* rate-box */
+.container .rate-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    padding-right: 10px;
+    border-radius: 20px;
+    box-shadow: inset 5px 5px 5px #cbced1,
+    inset -5px -5px 5px #ffffff;
+    transition: 0.5s;
+}
+
+.container .rate-box h3 {
+    min-width: 180px;
+    text-align: center;
+    padding-right: 20px;
+    color: #555;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* Rate-box stars alignment */
+.container .rate-box .rating {
+    position: relative;
+    display: flex;
+    margin: 10px 0;
+    flex-direction: row-reverse;
+}
+
+/* radio button hidden */
+.container .rate-box .rating input {
+    position: relative;
+    width: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Full star start */
+.container .rate-box .rating  input::before {
+    content: '\f005';
+    position: absolute;
+    font-family: FontAwesome;
+    font-size: 34px;
+    position: absolute;
+    left: 4px;
+    color: #cbced1;
+    transition: 0.5s;
+}
+/* Full star end */
+
+/* Overlapping stars */
+.container .rate-box .rating input:nth-child(odd)::before {
+    right: 4px;
+    left: initial;
+}
+
+/* Glow starts */
+.container .rate-box .rating input:hover ~ input::before,
+.container .rate-box .rating input:hover::before,
+.container .rate-box .rating input:checked ~ input::before,
+.container .rate-box .rating input:checked::before {
+    color: goldenrod;
+}
