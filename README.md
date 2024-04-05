@@ -16,3 +16,4 @@ This repository contains various tasks/ mini projects based on HTML, CSS and Jav
 | Animated Social Media Icons | Animated social media icons with on-hover links and color animation (using HTML and CSS).|
 | Interactive Rating Component | Component for users to rate products, hover and click interaction, dynamic display of selected rating. |
 | Responsive Navigation Menu  | A multilevel dropdown navigation menu which is responsive. Hamburger menu on mobile, smooth animations. |
+| CSS Animated Loaders      | Various animated loading icons using pure CSS (Spinners, bars, dots, custom animations)  |
