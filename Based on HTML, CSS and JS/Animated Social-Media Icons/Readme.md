@@ -8,5 +8,9 @@ In this task, each row consists of different sets of social media icons which ar
   1) Animated icons on hover
   2) Link
   3) Used HTML, CSS only
+  4) Slide name
+  5) Stack
+  6) 3D buttons
+  7) Tooltip
 
 Feel free to explore and customize each set according to your preferences and project requirements!
