@@ -1,5 +1,7 @@
 # Custom Scrollbars
 This project consists of different custom scrollbars using HTML and CSS.
+<br/>
+![Screenshot (53)](https://github.com/Chandanpreet-Kaur-15/FSD-Assignments/assets/139389365/ee5a25fb-0505-4aa9-95c6-39590772360d)
 
 ## Description
 Styled the scrollbars according to the theme
