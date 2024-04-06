@@ -8,7 +8,7 @@ This repository contains various tasks/ mini projects based on HTML, CSS and Jav
 | Netflix Clone             | Landing page and Signup page of Netflix website with FAQ dropdown.                      |
 | Personal Portfolio        | Portfolio with parallax effect/Interactive resume (using HTML, CSS, and JS).            |
 | Glassmorphism             | Simple login page using Glassmorphism effect (CSS).                                      |
-| Animation                 | Animated stars using pure CSS.                                                           |
+| Animation                 | Animated stars using pure CSS (On hover/ focus Slide, stack, toolptip, 3D button animations). |
 | Interactive Resume        | Static and responsive resume using HTML and CSS.                                          |
 | Email Newsletter          | Automatic sending of a newsletter via Email (Integration with Excel).                    |
 | Traffic Lights            | Interface of traffic Lights (using only HTML and CSS).                                   |
