@@ -11,4 +11,4 @@ This project consists of various animated loading icons using pure CSS.
 4. Custom animations
 
 ## Usage
-To use this project, simply open the index.html file in a web browser and vcan modify the code according to the preference.
+To use this project, simply open the index.html file in a web browser and can modify the code according to the preference.
