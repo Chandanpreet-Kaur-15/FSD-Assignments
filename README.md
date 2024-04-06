@@ -18,3 +18,4 @@ This repository contains various tasks/ mini projects based on HTML, CSS and Jav
 | Responsive Navigation Menu  | A multilevel dropdown navigation menu which is responsive. Hamburger menu on mobile, smooth animations. |
 | CSS Animated Loaders      | Various animated loading icons using pure CSS (Spinners, bars, dots, custom animations)  |
 | Animated Buttons          | Various animated buttons  using HTML and CSS (On hover color, size, border, shadow animations) |
+| Custom Scrollbars         | Custom scrollbars acc. to the theme using HTML and CSS (Color customization, width adjustment, hover effects) |
