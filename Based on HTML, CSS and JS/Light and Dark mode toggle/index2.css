@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap");
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    --color-body: white;
+    --border-inner: #e4e4e4;
+    --border-mid: #e8e8e8;
+    --border-outer: #eeeeee;
+    --bottom-line: #e4e4e4;
+    --top-line: #e4e4e4;
+    --speaker: #efefef;
+    --camera: #efefef;
+    --shadow: #8a8a8a;
+    --text: #1f1f1f;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    background: var(--color-body);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Mode transition */
+html * {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+}
+
+html .stop-1 {
+    stop-color: #f84f63;
+}
+
+html .stop-2 {
+    stop-color: #f8792b;
+}
+
+html .iphone {
+    position: relative;
+    width: 270px;
+    height: 585px;
+    background-color: #f5f5f5;
+    border-radius: 40px;
+    box-shadow: 0px 0px 0px 11px var(--border-inner), 0px 0px 0px 13px var(--border-mid), 0px 0px 0px 20px var(--border-outer), 0px 20px 40px var(--shadow);
+    overflow: hidden;
+}
+
+@media (max-width: 440px) {
+    html .iphone {
+        width: 240px;
+        height: 520px;
+    }
+}
+
+@media (max-width: 320px) {
+    html .iphone {
+        width: 192px;
+        height: 480px;
+    }
+}
+
+html .iphone:before,
+html .iphone:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+html .iphone:after {
+    bottom: 7px;
+    width: 105px;
+    height: 4px;
+    background-color: var(--bottom-line);
+    border-radius: 10px;
+}
+
+html .iphone:before {
+    top: 0px;
+    width: 56%;
+    height: 30px;
+    background-color: var(--top-line);
+    border-radius: 0px 0px 40px 40px;
+}
+
+html .iphone .speaker,
+html .iphone .camera {
+    position: absolute;
+    display: block;
+    color: transparent;
+    z-index: 3;
+}
+
+html .iphone .speaker {
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 6px);
+    height: 8px;
+    width: 20%;
+    background-color: var(--speaker);
+    border-radius: 8px;
+    box-shadow: inset 0px -3px 3px 0px rgb(255, 255, 255);
+}
+
+html .iphone .camera {
+    left: 10%;
+    top: 0px;
+    transform: translate(150px, 4px);
+    width: 12px;
+    height: 12px;
+    background-color: var(--camera);
+    border-radius: 12px;
+    box-shadow: inset 0px -3px 2px 0px rgb(255, 255, 255);
+}
+
+@media (max-width: 440px) {
+    html .iphone .camera {
+        display: none;
+    }
+}
+
+html .iphone .camera::after {
+    content: "";
+    position: absolute;
+    background-color: #2d4d76;
+    width: 6px;
+    height: 6px;
+    top: 2px;
+    left: 2px;
+    top: 3px;
+    left: 3px;
+    display: block;
+    border-radius: 4px;
+    box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.5);
+}
+
+html .iphone .moon {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -20%) rotate(-45deg);
+    transition: all 1s ease-out;
+    z-index: 2;
+}
+
+html .iphone .moon svg path {
+    transition: all 0.5s ease-out;
+}
+
+html .iphone .text {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -60%);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: var(--text);
+    z-index: 2;
+    user-select: none;
+}
+
+html .iphone .text .title {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+@media (max-width: 440px) {
+    html .iphone .text .title {
+        font-size: 16px;
+    }
+}
+
+.trigger {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #111111;
+    background-image: url(https://jssecrets.com/wp-content/uploads/2023/01/moon.svg);
+    background-size: 28px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 79%;
+    transform: translate(-50%, -80%);
+    z-index: 1;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-out;
+}
+
+html .iphone .trigger::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #111111;
+    transform: translateZ(-1px);
+    transition: all 0.5s ease-out;
+}
+
+html .iphone .trigger:hover::after {
+    transform: translateZ(-1px) scale(1.5);
+}
+
+html .iphone .overlay {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #111111;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -80%);
+    transition: all 0.75s ease-out;
+}
+
+.mode-toggle {
+    display: none;
+}
+
+.trigger:hover {
+    transform: translate(-50%, -80%) scale(1.4);
+}
+
+.mode-toggle:checked+.trigger {
+    background-image: url(https://jssecrets.com/wp-content/uploads/2023/01/sun.svg);
+}
+
+.mode-toggle:checked+ .overlay {
+    transform: translate(-50%, -80%) scale(20);
+
+}
+
+.mode-toggle:checked+.trigger+.container {
+    filter: invert(1);
+}
+
+.mode-toggle:checked + .trigger + .container .moon {
+    width: 80px;
+    height: 80px;
+    transform: translate(50%, 20%) rotate(30deg) scale(1);
+    mask: radial-gradient(circle at 10px, transparent 55px, white 0);
+}
