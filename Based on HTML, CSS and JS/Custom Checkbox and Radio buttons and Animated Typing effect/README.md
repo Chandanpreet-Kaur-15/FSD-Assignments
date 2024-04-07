@@ -1,6 +1,5 @@
 # Custom Checkbox, Radio Buttons and Animated Typing Effect
 This project consists of various customized radio buttons, checkboxes and animated typing effect.
-
 <br/>
 ![Screenshot (59)](https://github.com/Chandanpreet-Kaur-15/FSD-Assignments/assets/139389365/45e1a9e8-218c-47d6-89c5-e66d863e22ed)
 <br/>
