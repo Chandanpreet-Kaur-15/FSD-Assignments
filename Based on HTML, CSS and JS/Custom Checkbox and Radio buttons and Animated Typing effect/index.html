@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Checkbox and Radio buttons</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="typewriter">Custom </h1>
+        <div class="container-1">
+            <div class="box-1 box">
+                <div class="card">
+                    <div class="rating-container">
+                        <div class="rating">
+                            <form class="rating-form">
+                                
+                                <label for="super-happy">
+                                    <input type="radio" name="rating" class="super-happy" id="super-happy"
+                                        value="super-happy" />
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M12,17.5C14.33,17.5 16.3,16.04 17.11,14H6.89C7.69,16.04 9.67,17.5 12,17.5M8.5,11A1.5,1.5 0 0,0 10,9.5A1.5,1.5 0 0,0 8.5,8A1.5,1.5 0 0,0 7,9.5A1.5,1.5 0 0,0 8.5,11M15.5,11A1.5,1.5 0 0,0 17,9.5A1.5,1.5 0 0,0 15.5,8A1.5,1.5 0 0,0 14,9.5A1.5,1.5 0 0,0 15.5,11M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+                                    </svg>
+                                </label>
+
+                                <label for="happy">
+                                    <input type="radio" name="rating" class="happy" id="happy" value="happy" checked />
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" width="100%" height="100%" viewBox="0 0 24 24">
+                                        <path
+                                            d="M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M10,9.5C10,10.3 9.3,11 8.5,11C7.7,11 7,10.3 7,9.5C7,8.7 7.7,8 8.5,8C9.3,8 10,8.7 10,9.5M17,9.5C17,10.3 16.3,11 15.5,11C14.7,11 14,10.3 14,9.5C14,8.7 14.7,8 15.5,8C16.3,8 17,8.7 17,9.5M12,17.23C10.25,17.23 8.71,16.5 7.81,15.42L9.23,14C9.68,14.72 10.75,15.23 12,15.23C13.25,15.23 14.32,14.72 14.77,14L16.19,15.42C15.29,16.5 13.75,17.23 12,17.23Z" />
+                                    </svg>
+                                </label>
+
+                                <label for="neutral">
+                                    <input type="radio" name="rating" class="neutral" id="neutral" value="neutral" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" width="100%" height="100%" viewBox="0 0 24 24">
+                                        <path
+                                            d="M8.5,11A1.5,1.5 0 0,1 7,9.5A1.5,1.5 0 0,1 8.5,8A1.5,1.5 0 0,1 10,9.5A1.5,1.5 0 0,1 8.5,11M15.5,11A1.5,1.5 0 0,1 14,9.5A1.5,1.5 0 0,1 15.5,8A1.5,1.5 0 0,1 17,9.5A1.5,1.5 0 0,1 15.5,11M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M9,14H15A1,1 0 0,1 16,15A1,1 0 0,1 15,16H9A1,1 0 0,1 8,15A1,1 0 0,1 9,14Z" />
+                                    </svg>
+                                </label>
+
+                                <label for="sad">
+                                    <input type="radio" name="rating" class="sad" id="sad" value="sad" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" width="100%" height="100%" viewBox="0 0 24 24">
+                                        <path
+                                            d="M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M15.5,8C16.3,8 17,8.7 17,9.5C17,10.3 16.3,11 15.5,11C14.7,11 14,10.3 14,9.5C14,8.7 14.7,8 15.5,8M10,9.5C10,10.3 9.3,11 8.5,11C7.7,11 7,10.3 7,9.5C7,8.7 7.7,8 8.5,8C9.3,8 10,8.7 10,9.5M12,14C13.75,14 15.29,14.72 16.19,15.81L14.77,17.23C14.32,16.5 13.25,16 12,16C10.75,16 9.68,16.5 9.23,17.23L7.81,15.81C8.71,14.72 10.25,14 12,14Z" />
+                                    </svg>
+                                </label>
+
+                                <label for="super-sad">
+                                    <input type="radio" name="rating" class="super-sad" id="super-sad"
+                                        value="super-sad" />
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M16.18,7.76L15.12,8.82L14.06,7.76L13,8.82L14.06,9.88L13,10.94L14.06,12L15.12,10.94L16.18,12L17.24,10.94L16.18,9.88L17.24,8.82L16.18,7.76M7.82,12L8.88,10.94L9.94,12L11,10.94L9.94,9.88L11,8.82L9.94,7.76L8.88,8.82L7.82,7.76L6.76,8.82L7.82,9.88L6.76,10.94L7.82,12M12,14C9.67,14 7.69,15.46 6.89,17.5H17.11C16.31,15.46 14.33,14 12,14Z" />
+                                    </svg>
+                                </label>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-2 box">
+                <form class="form">
+                    <input id="one" type="radio" name="radios" value="one" class="input-2">
+                    <input id="two" type="radio" name="radios" value="two" class="input-2">
+                    <input id="three" type="radio" name="radios" value="three" class="input-2">
+                    <input id="four" type="radio" name="radios" value="four" class="input-2">
+                    <span class="span"></span>
+                    <label for="one" class="label">Option 1</label>
+                    <label for="two" class="label">Option 2</label>
+                    <label for="three" class="label">Option 3</label>
+                    <label for="four" class="label">Option 4</label>
+                </form>
+            </div>
+            <div class="box-3 box">
+                <div class="card-3">
+                    <ul>
+                        <li><input type="radio" id="rad1" name="radios" />
+                            <label for="rad1">
+                                <span class="outer">
+                                    <span class="inner">
+                                    </span>
+                                </span>
+                                <p class="inlet"><span class="text__effect">
+                                        Option 1
+                                    </span>
+                                </p>
+                            </label>
+                        </li>
+                        <li><input type="radio" id="rad2" name="radios" />
+                            <label for="rad2">
+                                <span class="outer">
+                                    <span class="inner">
+                                    </span>
+                                </span>
+                                <p class="inlet">
+                                    <span class="text__effect">
+                                        Option 2
+                                    </span>
+                                </p>
+                            </label>
+                        </li>
+                </div>
+            </div>
+            <div class="box-4 box">
+                <div class="radiogroup">
+                    <div class="wrapper">
+                        <input class="state" type="radio" name="app" id="a" value="a">
+                        <label class="label-4" for="a">
+                            <div class="indicator"></div>
+                            <span class="text">a) Option 1</span>
+                        </label>
+                    </div>
+                    <div class="wrapper">
+                        <input class="state" type="radio" name="app" id="b" value="b">
+                        <label class="label-4" for="b">
+                            <div class="indicator"></div>
+                            <span class="text">b) Option 2</span>
+                        </label>
+                    </div>
+                    <div class="wrapper">
+                        <input class="state" type="radio" name="app" id="c" value="c">
+                        <label class="label-4" for="c">
+                            <div class="indicator"></div>
+                            <span class="text">c) Option 3</span>
+                        </label>
+                    </div>
+                    <div class="wrapper">
+                        <input class="state" type="radio" name="app" id="d" value="d">
+                        <label class="label-4" for="d">
+                            <div class="indicator"></div>
+                            <span class="text">d) None of these</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="box-5 box">
+                <div id="form-wrapper">
+                    <form action="/p/quote.php" method="GET" class="form-5">
+                        <h1 id="form-title">Select Debt Amount</h1>
+                        <div id="debt-amount-slider">
+                            <input type="radio" name="debt-amount" id="1" value="1" required>
+                            <label for="1" data-debt-amount="< $10k"></label>
+                            <input type="radio" name="debt-amount" id="2" value="2" required>
+                            <label for="2" data-debt-amount="$10k-25k"></label>
+                            <input type="radio" name="debt-amount" id="3" value="3" required>
+                            <label for="3" data-debt-amount="$25k-50k"></label>
+                            <input type="radio" name="debt-amount" id="4" value="4" required>
+                            <label for="4" data-debt-amount="$50k-100k"></label>
+                            <input type="radio" name="debt-amount" id="5" value="5" required>
+                            <label for="5" data-debt-amount="$100k+"></label>
+                            <div id="debt-amount-pos"></div>
+                        </div>
+                    </form>
+                    <button type="submit" class="button-5">Get Debt Free!</button>
+                </div>
+            </div>
+            <div class="box-6 box">
+                <h2>Select difficulty&hellip;</h2>
+                <section>
+                    <div class="input-6">
+                        <input type="radio" id="control_01" name="select" value="1" checked>
+                        <label for="control_01">
+                            <h2>Pfft</h2>
+                            <p>Awww, poor baby. Too afraid of the scary game sprites? I laugh at you.</p>
+                        </label>
+                    </div>
+                    <div class="input-6">
+                        <input type="radio" id="control_02" name="select" value="2">
+                        <label for="control_02">
+                            <h2>Wannabe</h2>
+                            <p>You're not a gaming God by any stretch of the imagination.</p>
+                        </label>
+                    </div>
+                    <div class="input-6">
+                        <input type="radio" id="control_03" name="select" value="3">
+                        <label for="control_03">
+                            <h2>Daaamn</h2>
+                            <p>Now we're talking. It's gettin' a bit hairy out there in game land.</p>
+                        </label>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- Checkboxes -->
+        <h1 class="typewriter-2">Custom </h1>
+        <div class="container-2">
+            <div class="box-7 box">
+                <h1>Checkout Form</h1>
+                <form class="form-7 cf">
+                  <section class="plan cf">
+                    <h3>Choose a plan:</h3>
+                    <input type="radio" name="radio1" id="free" value="free"><label class="free-label four col" for="free">Free</label>
+                    <input type="radio" name="radio1" id="basic" value="basic" checked><label class="basic-label four col" for="basic">Basic</label>
+                    <input type="radio" name="radio1" id="premium" value="premium"><label class="premium-label four col" for="premium">Premium</label>
+                  </section>
+                  <section class="payment-plan cf">
+                    <h3>Select a payment plan:</h3>
+                    <input type="radio" name="radio2" id="monthly" value="monthly" checked><label class="monthly-label four col" for="monthly">Monthly</label>
+                    <input type="radio" name="radio2" id="yearly" value="yearly"><label class="yearly-label four col" for="yearly">Yearly</label>
+                  </section>
+                  <section class="payment-type cf">
+                    <h2>Select a payment type:</h2>
+                    <input type="radio" name="radio3" id="credit" value="credit"><label class="credit-label four col" for="credit">Credit</label>
+                    <input type="radio" name="radio3" id="debit" value="debit"><label class="debit-label four col" for="debit">Debit</label>
+                    <input type="radio" name="radio3" id="paypal" value="paypal" checked><label class="paypal-label four col" for="paypal">Paypal</label>
+                  </section>  
+                  <input class="submit" type="submit" value="Submit">   
+                </form>
+            </div>
+            <div class="box-8 box">
+                <div class="container-8">
+                <h2>Select your faviourites</h2>
+                <label for="checkbox-1">
+                    <input type="checkbox" id="checkbox-1" name="checkbox-1"/>
+                    🥕 Carrots
+                  </label>
+                  <label for="checkbox-2">
+                    <input type="checkbox" id="checkbox-2" name="checkbox-2"/>
+                    🍎 Apples 
+                  </label>
+                  <label for="checkbox-3">
+                    <input type="checkbox" id="checkbox-3" name="checkbox-3"/>
+                   🍐 Pears
+                  </label>
+                </div>
+            </div>
+            <div class="box-9 box">
+                <section class="app">
+                    <i class="fa fa-rocket"></i>
+                    <h1>It's time to <span class="blue-color">upgrade</span></h1>
+                    <article class="feature1">
+                      <input type="checkbox" id="feature1"/>
+                      <div>
+                        <span>
+                          20 GB<br/>
+                          + $15.00
+                        </span>
+                      </div>
+                    </article>
+                    
+                    <article class="feature2">
+                      <input type="checkbox" id="feature2"/>
+                      <div>
+                        <span>
+                          10 Emails<br/>
+                          + $10.00
+                        </span>
+                      </div>
+                    </article>
+                    
+                    <article class="feature3">
+                      <input type="checkbox" id="feature3"/>
+                      <div>
+                        <span>
+                          Support<br/>
+                          + $65.00
+                        </span>
+                      </div>
+                    </article>
+                    
+                    <article class="feature4">
+                      <input type="checkbox" id="feature4" checked/>
+                      <div>
+                        <span>
+                          Coffee<br/>
+                          $1.00
+                        </span>
+                      </div>
+                    </article>  
+                  </section>
+            </div>
+            <div class="box-10 box">
+                <label class="checkbox">
+                    <input type="checkbox" />
+                    <svg viewBox="0 0 21 18">
+                        <symbol id="tick-path" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.22003 7.26C5.72003 7.76 7.57 9.7 8.67 11.45C12.2 6.05 15.65 3.5 19.19 1.69" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                        </symbol>
+                        <defs>
+                            <mask id="tick">
+                                <use class="tick mask" href="#tick-path" />
+                            </mask>
+                        </defs>
+                        <use class="tick" href="#tick-path" stroke="currentColor" />
+                        <path fill="white" mask="url(#tick)" d="M18 9C18 10.4464 17.9036 11.8929 17.7589 13.1464C17.5179 15.6054 15.6054 17.5179 13.1625 17.7589C11.8929 17.9036 10.4464 18 9 18C7.55357 18 6.10714 17.9036 4.85357 17.7589C2.39464 17.5179 0.498214 15.6054 0.241071 13.1464C0.0964286 11.8929 0 10.4464 0 9C0 7.55357 0.0964286 6.10714 0.241071 4.8375C0.498214 2.39464 2.39464 0.482143 4.85357 0.241071C6.10714 0.0964286 7.55357 0 9 0C10.4464 0 11.8929 0.0964286 13.1625 0.241071C15.6054 0.482143 17.5179 2.39464 17.7589 4.8375C17.9036 6.10714 18 7.55357 18 9Z" />
+                    </svg>
+                    <svg class="lines" viewBox="0 0 11 11">
+                        <path d="M5.88086 5.89441L9.53504 4.26746" />
+                        <path d="M5.5274 8.78838L9.45391 9.55161" />
+                        <path d="M3.49371 4.22065L5.55387 0.79198" />
+                    </svg>
+                </label>       
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

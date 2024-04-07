@@ -1,0 +1,1720 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+    /* debug */
+    outline: calc(var(--debug) * 1px) dashed red;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+:root {
+    --accent: #4B6279;
+    --color: #2e2a2a;
+    --primary: #87745C;
+    --primary2: #4C95F7;
+    --clr--white: white;
+
+    --body-bg-color: hsl(221deg 16% 12%);
+    --checkbox-color-hue: 216;
+    --checkbox-color-saturation: 17;
+    --checkbox-color-lightness: 15;
+    --checkbox-color: hsl(calc(var(--checkbox-color-hue) * 1deg),
+            calc(var(--checkbox-color-saturation) * 1%),
+            calc(var(--checkbox-color-lightness) * 1%));
+
+    --checkbox-color-light: rgba(255, 255, 255, 0.32);
+    --checkbox-color-dark: rgba(0, 0, 0, 0.45);
+
+    /* -- Box */
+    --checkbox-border-radius: 24%;
+    --checkbox-width: 36;
+    --checkbox-height: 36;
+
+    --text-opacity: 0.6;
+
+    --negative-shadow-offset: 500;
+    --active-shadow-opacity: 0;
+
+    /* Check icon */
+    --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' class='feather feather-check'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+    --icon-opacity: 0;
+    --icon-size: 1;
+
+    /* Smooth transition */
+    --cubic-bezier: cubic-bezier(0.6, -1.2, 0.2, 2.2);
+
+    /* misc */
+    --debug: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+    align-items: center;
+}
+
+/* Typing Effect start */
+
+/* For Radio buttons */
+.typewriter {
+    position: relative;
+}
+
+.typewriter:before {
+    content: '|';
+    color: #C00;
+    animation: cursor-blink 1s infinite;
+    position: absolute;
+    top: -2px;
+    right: -4px;
+}
+
+@keyframes cursor-blink {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.typewriter:after {
+    content: '';
+    color: #C00;
+    animation: write 10s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes write {
+    1% {
+        content: 'C';
+    }
+
+    5% {
+        content: 'Ch';
+    }
+
+    15% {
+        content: 'Che';
+    }
+
+    20% {
+        content: 'Chec';
+    }
+
+    25% {
+        content: 'Check';
+    }
+
+    30% {
+        content: 'Checkb';
+    }
+
+    35% {
+        content: 'Checkbo';
+    }
+
+    37% {
+        content: 'Checkbox';
+    }
+
+    39% {
+        content: 'Checkboxe';
+    }
+
+    41% {
+        content: 'Checkboxes';
+    }
+
+    43% {
+        content: 'Checkboxe';
+    }
+
+    45% {
+        content: 'Checkbox';
+    }
+
+    47% {
+        content: 'Checkbo';
+    }
+
+    49% {
+        content: 'Checkb';
+    }
+
+    51% {
+        content: 'Check';
+    }
+
+    53% {
+        content: 'Chec';
+    }
+
+    55% {
+        content: 'Che';
+    }
+
+    60% {
+        content: 'Ch';
+    }
+
+    65% {
+        content: 'C';
+    }
+
+    70% {
+        content: '';
+    }
+
+    75% {
+        content: 'R';
+    }
+
+    80% {
+        content: 'Ra';
+    }
+
+    84% {
+        content: 'Rad';
+    }
+
+    86% {
+        content: 'Radi';
+    }
+
+    88% {
+        content: 'Radio';
+    }
+
+    90% {
+        content: 'Radio B';
+    }
+
+    92% {
+        content: 'Radio Bu';
+    }
+
+    94% {
+        content: 'Radio But';
+    }
+
+    96% {
+        content: 'Radio Butt';
+    }
+
+    98% {
+        content: 'Radio Butto';
+    }
+
+    100% {
+        content: 'Radio Buttons -';
+    }
+}
+
+/* For checkboxes */
+.typewriter-2 {
+    position: relative;
+}
+
+.typewriter-2:before {
+    content: '|';
+    color: #C00;
+    animation: cursor-blink2 1s infinite;
+    position: absolute;
+    top: -2px;
+    right: -4px;
+
+}
+
+@keyframes cursor-blink2 {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.typewriter-2:after {
+    content: '';
+    color: #C00;
+    animation: write2 10s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes write2 {
+    1% {
+        content: 'R';
+    }
+
+    5% {
+        content: 'Ra';
+    }
+
+    15% {
+        content: 'Radi';
+    }
+
+    20% {
+        content: 'Radio';
+    }
+
+    25% {
+        content: 'Radio B';
+    }
+
+    30% {
+        content: 'Radio Bu';
+    }
+
+    35% {
+        content: 'Radio But';
+    }
+
+    37% {
+        content: 'Radio Butt';
+    }
+
+    39% {
+        content: 'Radio Butto';
+    }
+
+    41% {
+        content: 'Radio Button';
+    }
+
+    43% {
+        content: 'Radio Buttons';
+    }
+
+    45% {
+        content: 'Radio Butto';
+    }
+
+    47% {
+        content: 'Radio Butt';
+    }
+
+    49% {
+        content: 'Radio But';
+    }
+
+    51% {
+        content: 'Radio Bu';
+    }
+
+    53% {
+        content: 'Radio B';
+    }
+
+    55% {
+        content: 'Radio';
+    }
+
+    60% {
+        content: 'Radi';
+    }
+
+    65% {
+        content: 'Rad';
+    }
+
+    70% {
+        content: 'Ra';
+    }
+
+    75% {
+        content: 'R';
+    }
+
+    80% {
+        content: '';
+    }
+
+    84% {
+        content: 'C';
+    }
+
+    86% {
+        content: 'Ch';
+    }
+
+    88% {
+        content: 'Che';
+    }
+
+    90% {
+        content: 'Chec';
+    }
+
+    92% {
+        content: 'Check';
+    }
+
+    94% {
+        content: 'Checkb';
+    }
+
+    96% {
+        content: 'Checkbo';
+    }
+
+    98% {
+        content: 'Checkbox';
+    }
+
+    100% {
+        content: 'Checkboxes -';
+    }
+}
+
+/* Typing Effect end */
+
+.container-1,
+.container-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: auto;
+}
+
+.box {
+    height: 300px;
+    width: 400px;
+}
+
+/* Box-1 start */
+.box-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(248, 197, 130);
+}
+
+.card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    padding: 0.8rem;
+    width: 26rem;
+}
+
+.rating-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.4rem 0.8rem;
+    width: 100%;
+}
+
+.rating {
+    background-color: rgba(0, 0, 16, 0.8);
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 16, 0.19), 0 0.3rem 0.3rem rgba(0, 0, 16, 0.23);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 16, 0.19), 0 0.3rem 0.3rem rgba(0, 0, 16, 0.23);
+    padding: 0.4rem 0.4rem 0.1rem 0.4rem;
+    border-radius: 2.2rem;
+}
+
+label svg {
+    fill: rgb(242, 242, 242);
+    height: 3.6rem;
+    width: 3.6rem;
+    margin: 0.2rem;
+}
+
+.rating-form-2 svg {
+    height: 3rem;
+    width: 3rem;
+    margin: 0.5rem;
+}
+
+#radios label {
+    position: relative;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+input[type="radio"]+svg {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+input+svg {
+    cursor: pointer;
+}
+
+input[class="super-happy"]:hover+svg,
+input[class="super-happy"]:checked+svg,
+input[class="super-happy"]:focus+svg {
+    fill: rgb(0, 109, 217);
+}
+
+input[class="happy"]:hover+svg,
+input[class="happy"]:checked+svg,
+input[class="happy"]:focus+svg {
+    fill: rgb(0, 204, 79);
+}
+
+input[class="neutral"]:hover+svg,
+input[class="neutral"]:checked+svg,
+input[class="neutral"]:focus+svg {
+    fill: rgb(232, 214, 0);
+}
+
+input[class="sad"]:hover+svg,
+input[class="sad"]:checked+svg,
+input[class="sad"]:focus+svg {
+    fill: rgb(229, 132, 0);
+}
+
+input[class="super-sad"]:hover+svg,
+input[class="super-sad"]:checked+svg,
+input[class="super-sad"]:focus+svg {
+    fill: rgb(239, 42, 16);
+}
+
+/* Box-1 end */
+
+/* Box-2 start */
+.box-2 {
+    background: url('bg-wood.jpg') 50% 50%;
+    color: #5f2002;
+    display: flex;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.form {
+    margin: auto;
+    max-width: 10em;
+    padding: 1.5em 0;
+    position: relative;
+}
+
+.form label:before,
+.form span:before {
+    border-radius: 50%;
+    content: "";
+}
+
+.form label {
+    cursor: pointer;
+    display: flex;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.form label:before {
+    background: radial-gradient(100% 100% at 33% 33%, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 50%), radial-gradient(100% 100% at 67% 67%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0) 50%);
+    box-shadow: 0 0 0.75em #000 inset;
+    display: inline-block;
+    margin-right: 0.375em;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.form label:not(:last-of-type) {
+    margin-bottom: 1.5em;
+}
+
+.form span {
+    position: absolute;
+    top: 1.75em;
+    left: 0.25em;
+    width: 1em;
+    height: 1em;
+    transition: transform 0.25s linear;
+    z-index: 1;
+}
+
+.form span,
+.form span:before {
+    display: block;
+}
+
+.form span:before {
+    background: radial-gradient(10% 10% at 50% 50%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0)), radial-gradient(12% 12% at 60% 25%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0)), radial-gradient(100% 100% at 60% 50%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.25) 50%);
+    border-radius: 50%;
+    box-shadow: 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.5), 0 0 0.1em 0.1em rgba(0, 0, 0, 0.25) inset;
+    width: 100%;
+    height: 100%;
+}
+
+.input {
+    position: fixed;
+    top: -1.5em;
+    left: -1.5em;
+}
+
+.form input:nth-of-type(1):checked~span {
+    transform: translateY(0);
+}
+
+.form input:nth-of-type(1):checked~span:before {
+    animation: wobble1 0.5s linear forwards;
+}
+
+.form input:nth-of-type(2):checked~span {
+    transform: translateY(3em);
+}
+
+.form input:nth-of-type(2):checked~span:before {
+    animation: wobble2 0.5s linear forwards;
+}
+
+.form input:nth-of-type(3):checked~span {
+    transform: translateY(6em);
+}
+
+.form input:nth-of-type(3):checked~span:before {
+    animation: wobble3 0.5s linear forwards;
+}
+
+.form input:nth-of-type(4):checked~span {
+    transform: translateY(9em);
+}
+
+.form input:nth-of-type(4):checked~span:before {
+    animation: wobble4 0.5s linear forwards;
+}
+
+@keyframes wobble {
+
+    from,
+    to {
+        transform: translateY(0) scale(1);
+    }
+
+    25% {
+        transform: translateY(0) scale(1.33);
+    }
+
+    50% {
+        transform: translateY(0.25em) scale(1);
+    }
+
+    67% {
+        transform: translateY(-0.15em) scale(1);
+    }
+
+    83% {
+        transform: translateY(0.07em) scale(1);
+    }
+}
+
+@keyframes wobble2 {
+
+    from,
+    to {
+        transform: translateY(0) scale(1);
+    }
+
+    25% {
+        transform: translateY(0) scale(1.33);
+    }
+
+    50% {
+        transform: translateY(0.25em) scale(1);
+    }
+
+    67% {
+        transform: translateY(-0.15em) scale(1);
+    }
+
+    83% {
+        transform: translateY(0.07em) scale(1);
+    }
+}
+
+@keyframes wobble3 {
+
+    from,
+    to {
+        transform: translateY(0) scale(1);
+    }
+
+    25% {
+        transform: translateY(0) scale(1.33);
+    }
+
+    50% {
+        transform: translateY(0.25em) scale(1);
+    }
+
+    67% {
+        transform: translateY(-0.15em) scale(1);
+    }
+
+    83% {
+        transform: translateY(0.07em) scale(1);
+    }
+}
+
+@keyframes wobble4 {
+
+    from,
+    to {
+        transform: translateY(0) scale(1);
+    }
+
+    25% {
+        transform: translateY(0) scale(1.33);
+    }
+
+    50% {
+        transform: translateY(0.25em) scale(1);
+    }
+
+    67% {
+        transform: translateY(-0.15em) scale(1);
+    }
+
+    83% {
+        transform: translateY(0.07em) scale(1);
+    }
+}
+
+/* Box-2 end */
+
+/* Box-3 start */
+.box-3 {
+    background: #fae73d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+ul {
+    list-style-type: none;
+    position: relative;
+}
+
+li {
+    display: block;
+    height: 50px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.card-3 {
+    background: #fff;
+    text-align: center;
+    width: 300px;
+    height: 250px;
+    margin: 50px auto;
+    box-shadow: 8px 8px 1px 1px var(--primary);
+}
+
+li input[type="radio"] {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+}
+
+li input[type="radio"]:hover+label .outer .inner:before {
+    opacity: 0.2;
+    display: inline-block;
+    position: absolute;
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+
+/* After checking */
+li input[type="radio"]:checked label .inner:before {
+    opacity: 1;
+    transform: scale(1.5);
+    transition: all 0.2s ease;
+}
+
+li input[type="radio"]:focus+label .outer .inner:before {
+    opacity: 1;
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
+
+/* Ripple Animation */
+li input[type="radio"]:focus+label .outer {
+    transform: translate(0.09em, 0.09em);
+    box-shadow: 0px 0px 0px 0px rgba(200, 200, 200, 0.1);
+    border: 3px solid var(--accent);
+    transition-delay: 0.75s;
+    animation: boom 1s ease-out;
+    animation-delay: 0.75s;
+}
+
+li input[type="radio"]:focus+label .inlet .text__effect {
+    transition: all 0.2s ease-out;
+    transition-delay: 0.75s;
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+}
+
+li input[type="radio"]+label .inlet .text__effect {
+    cursor: pointer;
+}
+
+li input[type="radio"]:focus+label .outer .inner:after {
+    opacity: 1;
+    transform: translate(140px, -150px) scale(0.01);
+    transition: all 1s ease;
+}
+
+.outer {
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--primary);
+    position: relative;
+    display: inline-block;
+    background: transparent;
+    margin: 25px 20px 0 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 0;
+}
+
+.inner {
+    position: relative;
+    font-family: FontAwesome;
+}
+
+.inner:before {
+    content: "\f00c";
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    top: 50%;
+    left: 7px;
+    color: var(--accent);
+    transform: scale(0) translateY(-50%);
+}
+
+/* Paperplane */
+.inner:after {
+    content: '\f1d9';
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    left: -140px;
+    bottom: -180px;
+    font-size: 2em;
+    transform: scale(3);
+    color: var(--accent);
+}
+
+.inlet {
+    position: relative;
+    top: -27px;
+    left: 80px;
+    color: var(--primary);
+}
+
+/* Animations */
+@keyframes boom {
+    0% {
+        box-shadow: 0px 0px 0px 15px rgba(100, 100, 100, 0.25);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 15px rgba(100, 100, 100, 0.0);
+    }
+}
+
+/* Box-3 end */
+
+/* Box-4 start */
+.box-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d1e6f7;
+}
+
+.radiogroup {
+    padding: 48px 64px;
+    border-radius: 16px;
+    background: #ecf0f3;
+    box-shadow:
+        4px 4px 4px 0px #d1d9e6 inset,
+        -4px -4px 4px 0px #ffffff inset;
+}
+
+.wrapper {
+    margin: 8px 0;
+}
+
+.state {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 1e-5;
+    pointer-events: none;
+}
+
+.label-4 {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    color: #394a56;
+}
+
+.text {
+    margin-left: 16px;
+    opacity: .6;
+    transition: opacity .2s linear, transform .2s ease-out;
+}
+
+.indicator {
+    position: relative;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    box-shadow:
+        -8px -4px 8px 0px #ffffff,
+        8px 4px 12px 0px #d1d9e6;
+    overflow: hidden;
+}
+
+.indicator::before,
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+}
+
+.indicator::before {
+    box-shadow:
+        -4px -2px 4px 0px #d1d9e6,
+        4px 2px 8px 0px #fff;
+}
+
+.indicator::after {
+    background-color: #ecf0f3;
+    box-shadow:
+        -4px -2px 4px 0px #fff,
+        4px 2px 8px 0px #d1d9e6;
+    transform: scale3d(1, 1, 1);
+    transition: opacity .25s ease-in-out, transform .25s ease-in-out;
+}
+
+.state:checked~.label-4 .indicator::after {
+    transform: scale3d(.975, .975, 1) translate3d(0, 10%, 0);
+    opacity: 0;
+}
+
+.state:focus~.label-4 .text {
+    transform: translate3d(8px, 0, 0);
+    opacity: 1;
+}
+
+.label-4:hover .text {
+    opacity: 1;
+}
+
+/* Box-4 end */
+
+/* Box-5 start */
+.box-5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color);
+    background-color: #faf1f1;
+    user-select: none;
+}
+
+#form-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-5 {
+    width: 90%;
+    max-width: 500px;
+}
+
+#form-title {
+    margin-top: 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+#debt-amount-slider {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    user-select: none;
+}
+
+/* Horizontal Line */
+#debt-amount-slider::before {
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: calc(100% * (5 - 1) / 5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color);
+}
+
+#debt-amount-slider input,
+#debt-amount-slider label {
+    box-sizing: border-box;
+    flex: 1;
+    user-select: none;
+    cursor: pointer;
+}
+
+#debt-amount-slider label {
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 100%;
+}
+
+#debt-amount-slider label::before {
+    content: attr(data-debt-amount);
+    position: absolute;
+    left: 50%;
+    padding-top: 10px;
+    transform: translate(-50%, 45px);
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0.85;
+    transition: all 0.15s ease-in-out;
+}
+
+#debt-amount-slider label::after {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: 2px solid #000;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+#debt-amount-pos {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background: var(--color);
+    border-radius: 50%;
+    transition: all 0.15s ease-in-out;
+    transform: translate(-50%, -50%);
+    border: 2px solid #fff;
+    opacity: 0;
+    z-index: 2;
+}
+
+#debt-amount-slider label:hover::after {
+    transform: translate(-50%, -50%) scale(1.25);
+}
+
+#debt-amount-slider input {
+    display: none;
+}
+
+#debt-amount-slider input:checked+label::before {
+    font-weight: 800;
+    opacity: 1;
+}
+
+#debt-amount-slider input:checked+label::after {
+    border-width: 4px;
+    transform: translate(-50%, -50%) scale(0.75);
+}
+
+#debt-amount-slider input:nth-child(odd):checked~#debt-amount-pos {
+    opacity: 1;
+    left: calc((1 * 20%) - 10%);
+}
+
+#debt-amount-slider input:nth-child(3):checked~#debt-amount-pos {
+    opacity: 1;
+    left: calc((2 * 20%) - 10%);
+}
+
+#debt-amount-slider input:nth-child(5):checked~#debt-amount-pos {
+    opacity: 1;
+    left: calc((3 * 20%) - 10%);
+}
+
+#debt-amount-slider input:nth-child(7):checked~#debt-amount-pos {
+    opacity: 1;
+    left: calc((4 * 20%) - 10%);
+}
+
+#debt-amount-slider input:nth-child(9):checked~#debt-amount-pos {
+    opacity: 1;
+    left: calc((5 * 20%) - 10%);
+}
+
+.form-5:valid #debt-amount-slider input:checked+label::before {
+    transform: translate(-50%, 45px) scale(1.1);
+    transition: all 0.15s linear;
+}
+
+.form-5:invalid+.button-5 {
+    pointer-events: none;
+    opacity: 0.25;
+}
+
+.button-5 {
+    display: block;
+    position: relative;
+    margin: 56px auto 0;
+    padding: 10px 20px;
+    appearance: none;
+    transition: all 0.15s ease-in-out;
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 600;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    outline: 0;
+    user-select: none;
+    cursor: pointer;
+}
+
+.button-5:hover {
+    background: #000;
+    color: #fff;
+}
+
+.button-5:active {
+    transform: scale(0.9);
+}
+
+.button-5:focus {
+    background: #4caf50;
+    border-color: #4caf50;
+    color: #fff;
+    pointer-events: none;
+}
+
+.button-5:focus::before {
+    display: inline-block;
+    width: 0;
+    opacity: 0;
+    content: "\f3f4";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    margin-right: 0;
+    transform: rotate(0deg);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+        width: 24px;
+        opacity: 1;
+        margin-right: 12px;
+    }
+
+    to {
+        transform: rotate(360deg);
+        width: 24px;
+        opacity: 1;
+        margin-right: 12px;
+    }
+}
+
+/* Box-5 end*/
+
+/* Box-6 start */
+.box-6 {
+    color: var(--color);
+    background-color: #a3f5a5;
+    padding: 0.2rem;
+}
+
+.box-6 h1 {
+    color: var(--color);
+    margin-bottom: 1rem;
+}
+
+.box-6 section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.box-6 section>div {
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.input-6 input[type="radio"] {
+    display: none;
+}
+
+.input-6 input[type="radio"]:not(:disabled)~label {
+    cursor: pointer;
+}
+
+.input-6 input[type="radio"]:disabled~label {
+    color: hsla(150, 5%, 75%, 1);
+    border-color: hsla(150, 5%, 75%, 1);
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.input-6 label {
+    height: 100%;
+    display: block;
+    background: white;
+    border: 2px solid hsla(150, 75%, 50%, 1);
+    border-radius: 20px;
+    padding: 0.7rem;
+    margin-bottom: 0.1rem;
+    text-align: center;
+    box-shadow: 0px 3px 10px -2px hsla(150, 5%, 65%, 0.5);
+    position: relative;
+}
+
+.input-6 input[type="radio"]:checked+label {
+    background: hsla(150, 75%, 50%, 1);
+    color: hsla(215, 0%, 100%, 1);
+    box-shadow: 0px 0px 20px hsla(150, 100%, 50%, 0.75);
+}
+
+.input-6 input[type="radio"]:checked+label::after {
+    color: hsla(215, 5%, 25%, 1);
+    font-family: FontAwesome;
+    border: 2px solid hsla(150, 75%, 45%, 1);
+    content: "\f00c";
+    font-size: 24px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0px 2px 5px -2px hsla(0, 0%, 0%, 0.25);
+}
+
+.input-6 input[type="radio"]#control_05:checked+label {
+    background: red;
+    border-color: red;
+}
+
+.box-6 p {
+    font-weight: 900;
+}
+
+/* Box-6 end */
+
+
+/* CHECKBOXES */
+.box-7 {
+    padding: 10px;
+    font-family: sans-serif;
+    color: #333;
+    background-color: #eee;
+    overflow-y: scroll;
+}
+
+.box-7 {
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.four {
+    width: 32.26%;
+    max-width: 32.26%;
+}
+
+.box-7 h1,
+.box-7 h2,
+.box-7 h3,
+.box-7 h4,
+.box-7 h5,
+.box-7 h6 {
+    font-weight: 200;
+}
+
+.box-7 h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2fcc71;
+    max-width: 40%;
+    margin: 10px auto;
+    font-size: 1.3rem;
+}
+
+/* CONTAINERS */
+
+.container {
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.four {
+    width: 32.26%;
+    max-width: 32.26%;
+}
+
+
+/* COLUMNS */
+
+.col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type {
+    margin-left: 0;
+}
+
+/* CLEARFIX */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    zoom: 1;
+}
+
+/* Form */
+.form-7 .plan input,
+.form-7 .payment-plan input,
+.form-7 .payment-type input {
+    display: none;
+}
+
+.form-7 label {
+    position: relative;
+    color: #fff;
+    background-color: #aaa;
+    font-size: 26px;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+    display: block;
+    cursor: pointer;
+    border: 3px solid transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-7 .plan input:checked+label,
+.form-7 .payment-plan input:checked+label,
+.form-7 .payment-type input:checked+label {
+    border: 3px solid #333;
+    background-color: #2fcc71;
+}
+
+.form-7 .plan input:checked+label:after,
+form-7 .payment-plan input:checked+label:after,
+.form-7 .payment-type input:checked+label:after {
+    content: "\2713";
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100%;
+    border: 2px solid #333;
+    background-color: #2fcc71;
+    z-index: 999;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.submit {
+    padding: 15px 60px;
+    display: inline-block;
+    border: none;
+    margin: 20px 0;
+    background-color: #2fcc71;
+    color: #fff;
+    border: 2px solid #333;
+    font-size: 18px;
+    -webkit-transition: transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.submit:hover {
+    cursor: pointer;
+    transform: rotateY(-180deg);
+}
+
+/* Box-7 end */
+
+/* Box-8 start */
+.box-8 {
+    background: var(--body-bg-color);
+    display: grid;
+    place-items: center;
+    font-family: "Mona Sans", sans-serif;
+}
+
+.container-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    grid-gap: 0.8em;
+    transform: scale(1);
+}
+
+.box-8 label[for*="checkbox"] {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 8px;
+
+    /* text settings */
+    color: rgba(255, 255, 255, var(--text-opacity));
+    font-size: 1.6em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+
+    transition: var(--text-opacity) 0.2s ease;
+}
+
+.box-8 label[for*="checkbox"]:hover {
+    --text-opacity: 1;
+}
+
+.box-8 label[for*="checkbox"]:hover::after {
+    --icon-opacity: 0.5;
+    --icon-invert: 100;
+    --icon-size: 0.8;
+}
+
+.box-8 label[for*="checkbox"] input[type="checkbox"]:hover {
+    --checkbox-color-hue: 216;
+    --checkbox-color-saturation: 14;
+    --checkbox-color-lightness: 18;
+}
+
+.box-8 label[for*="checkbox"] input[type="checkbox"]:checked {
+    --checkbox-color-hue: 265;
+    --checkbox-color-saturation: 80;
+    --checkbox-color-lightness: 61;
+}
+
+.box-8 label[for*="checkbox"]::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(var(--checkbox-width) * 1px);
+    height: calc(var(--checkbox-height) * 1px);
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70%;
+    border-radius: var(--checkbox-border-radius);
+    pointer-events: none;
+    background-image: var(--icon-check);
+    filter: invert(100%);
+    opacity: var(--icon-opacity);
+    transform: scale(var(--icon-size));
+
+    transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s var(--cubic-bezier);
+}
+
+.box-8 label[for*="checkbox"]:has(input[type="checkbox"]:checked)::after {
+    --icon-opacity: 1;
+    filter: invert(0%);
+}
+
+.box-8 label[for*="checkbox"] input[type="checkbox"] {
+    appearance: none;
+    cursor: pointer;
+    margin: 0;
+    background: var(--checkbox-color);
+    width: calc(var(--checkbox-width) * 1px);
+    height: calc(var(--checkbox-height) * 1px);
+    border: calc(var(--checkbox-width) / 15 * 1px) solid black;
+    border-radius: var(--checkbox-border-radius);
+    box-shadow: inset 0 0 calc(var(--checkbox-width) / 10 * 1px) rgba(0, 0, 0, var(--active-shadow-opacity)),
+        inset 0 calc(var(--checkbox-width) / 20 * 1px) calc(var(--checkbox-width) / 30 * 1px) calc(var(--checkbox-width) / var(--negative-shadow-offset) * -1px) var(--checkbox-color-light),
+        inset 0 calc(var(--checkbox-width) / 20 * -1px) calc(var(--checkbox-width) / 15 * 1px) calc(var(--checkbox-width) / var(--negative-shadow-offset) * -1px) var(--checkbox-color-dark);
+    transition: --checkbox-color-hue 0.1s ease,
+        --checkbox-color-saturation 0.1s ease,
+        --checkbox-color-lightness 0.1s ease,
+        --checkbox-color 0s ease,
+        --negative-shadow-offset 0.2s ease;
+}
+
+.box-8 label[for*="checkbox"] input[type="checkbox"]:active,
+.box-8 label[for*="checkbox"] input[type="checkbox"]:checked {
+    --checkbox-color-hue: 264;
+    --checkbox-color-saturation: 56;
+    --checkbox-color-lightness: 49;
+}
+
+.box-8 label[for*="checkbox"]:active::after {
+    --icon-size: 0.7;
+}
+
+.box-8 label[for*="checkbox"] input[type="checkbox"]:active {
+    --negative-shadow-offset: 0;
+}
+
+/* Box-8 end */
+
+/* Box-9 start */
+.box-9 {
+    text-align: center;
+    color: #f5f5f5;
+    background-image: linear-gradient(-90deg, #0c0c0d, #1a1a1a);
+    font-family: 'Roboto';
+}
+
+.app {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.app i {
+    font-size: 50px;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+}
+
+article {
+    position: relative;
+    width: 140px;
+    height: 100px;
+    margin: 5px;
+    float: left;
+    border: 2px solid #50bcf2;
+    box-sizing: border-box;
+}
+
+article div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 25px;
+    transition: .5s ease;
+}
+
+article input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 100px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.box-9 input[type=checkbox]:checked~div {
+    background-color: #50bcf2;
+}
+
+.upgrade-btn {
+    display: block;
+    margin: 30px auto;
+    width: 200px;
+    padding: 10px 20px;
+    border: 2px solid #50bcf2;
+    border-radius: 50px;
+    color: #f5f5f5;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.upgrade-btn:hover {
+    background-color: #50bcf2;
+}
+
+.blue-color {
+    color: #50bcf2;
+}
+
+.gray-color {
+    color: #555;
+}
+
+@keyframes slidein {
+    from {
+        margin-top: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin: 0%;
+        width: 100%;
+    }
+}
+
+/* Box-9 end */
+
+/* Box-10 start */
+.box-10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color);
+}
+
+.checkbox {
+    --border-default: #bbbbc1;
+    --border-hover: #9898a3;
+    --active: #6E7BF2;
+    --active-tick: #ffffff;
+    display: block;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.checkbox svg {
+    display: block;
+    position: absolute;
+}
+
+.checkbox input {
+    display: block;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 36% / 36%;
+    box-shadow: inset 0 0 0 1.5px var(--border, var(--border-default));
+    background: var(--background, transparent);
+    transition: .25s linear, box-shadow .25s linear;
+}
+
+.checkbox input+svg {
+    width: 21px;
+    height: 18px;
+    left: 0;
+    top: 0;
+    color: var(--active);
+}
+
+.checkbox input+svg .tick {
+    stroke-dasharray: 20;
+    stroke-dashoffset: var(--stroke-dashoffset, 20);
+    transition: stroke-dashoffset .2s;
+}
+
+.checkbox input+svg .tick.mask {
+    stroke: var(--active-tick);
+}
+
+.checkbox input+svg+svg {
+    width: 11px;
+    height: 11px;
+    fill: none;
+    stroke: var(--active);
+    stroke-width: 1.25;
+    stroke-linecap: round;
+    top: -6px;
+    right: -10px;
+    stroke-dasharray: 4.5px;
+    stroke-dashoffset: 13.5px;
+    pointer-events: none;
+    animation: var(--animation, none) .2s ease .175s;
+}
+
+.checkbox input:checked {
+    --background: var(--active);
+    --border: var(--active);
+}
+
+.checkbox input:checked+svg .tick {
+    --stroke-dashoffset: 0;
+}
+
+.checkbox input:checked+svg+svg {
+    --animation: check;
+}
+
+.checkbox input:not(:checked):hover {
+    --border: var(--border-hover);
+}
+
+@keyframes check {
+    100% {
+        stroke-dashoffset: 4.5px;
+    }
+}
+
+/* Box-10 end */
