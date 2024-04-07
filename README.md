@@ -13,10 +13,11 @@ This repository contains various tasks/ mini projects based on HTML, CSS and Jav
 | Email Newsletter          | Automatic sending of a newsletter via Email (Integration with Excel).                    |
 | Traffic Lights            | Interface of traffic Lights (using only HTML and CSS).                                   |
 | Traffic Lights            | Interface of traffic Lights (using only HTML, CSS and JS).                                   |
-| Animated Social Media Icons | Animated social media icons with on-hover links and color animation using HTML and CSS (On hover/ focus Slide, stack, toolptip, 3D button animations). |
+| Animated Social Media Icons + Tooltip | Animated social media icons with on-hover links and color animation using HTML and CSS (On hover/ focus Slide, stack, toolptip - text tooltips,fade-in animations, 3D button animations). |
 | Interactive Rating Component | Component for users to rate products, hover and click interaction, dynamic display of selected rating. |
 | Responsive Navigation Menu  | A multilevel dropdown navigation menu which is responsive. Hamburger menu on mobile, smooth animations. |
 | CSS Animated Loaders      | Various animated loading icons using pure CSS (Spinners, bars, dots, custom animations).  |
 | Animated Buttons          | Various animated buttons  using HTML and CSS (On hover color, size, border, shadow animations). |
 | Custom Scrollbars         | Custom scrollbars acc. to the theme using HTML and CSS (Color customization, width adjustment, hover effects). |
 | Mode toggle               | Light and dark mode toggle which allows users to switch between light and dark themes using HTML and CSS (Theme toggle button, smooth transition between themes, use of CSS variables for easy colour management, use of clip-path). |
+| Custom Checkbox, Radio Buttons and Animated Typing Effect | Styled checkboxes and radio buttons in different ways (using HTML and CSS only), (Custom shapes, Animations on check/uncheck, Neumorphism effect,  Keyboard accessible, Animated typing effect, Blinking Cursor, Text appears letter by letter, Loop restarts and stops). |
